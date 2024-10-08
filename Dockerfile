@@ -1,6 +1,9 @@
 # Base image used
 FROM docker.io/library/rockylinux:9
 
+RUN dnf install -y dnf-plugins-core && \
+    dnf config-manager --set-enabled crb
+
 RUN /bin/sh -c echo "[mewl]" > /etc/yum.repos.d/mewl.repo && \
     echo "name=Mewl Linux - BaseOS" >> /etc/yum.repos.d/mewl.repo && \
     echo "baseurl=https://baseos.repos.mewl.io/" >> /etc/yum.repos.d/mewl.repo && \
