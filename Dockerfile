@@ -16,6 +16,12 @@ RUN dnf install -y \
     bzip2 \
     xz \
     findutils \
+    gawk \
+    m4 \
+    autoconf \
+    automake \
+    patch \
+    gettext \
     kernel-devel \
     bc \
     dwarves \
